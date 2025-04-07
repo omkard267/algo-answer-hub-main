@@ -1,0 +1,152 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Fira+Code:wght@300..700&display=swap');
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 224 76% 48%;
+
+    --radius: 0.5rem;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 84% 5%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
+
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Prism.js Syntax Highlighting Styles */
+pre[class*="language-"],
+code[class*="language-"] {
+  @apply text-sm sm:text-base text-blue-50 font-code;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-400;
+}
+
+.token.punctuation {
+  @apply text-gray-300;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-red-300;
+}
+
+.token.boolean,
+.token.number {
+  @apply text-orange-300;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-green-300;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  @apply text-yellow-200;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  @apply text-blue-300;
+}
+
+.token.keyword {
+  @apply text-purple-300;
+}
+
+.token.regex,
+.token.important {
+  @apply text-red-400;
+}
+
+code {
+  @apply font-code;
+}
+
+pre {
+  @apply rounded-md p-4 bg-code text-code-foreground overflow-x-auto;
+}
